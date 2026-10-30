@@ -1,0 +1,56 @@
+{
+  "split_dir": "data/splits/v2_train_qc",
+  "seed": 42,
+  "importance_repeats": 10,
+  "features": [
+    "gender",
+    "height_m",
+    "mass_kg",
+    "bmi_kg_m2",
+    "skinfolds_mm",
+    "fat_pct",
+    "lbm_kg",
+    "hb",
+    "hct",
+    "rbc",
+    "wbc",
+    "vo2max_ml_kg_min",
+    "vo2max_l_min",
+    "ve_max_l_min",
+    "hr_max_bpm",
+    "vo2_160bpm_ml_kg_min",
+    "power_160bpm_W",
+    "age_years",
+    "median_hr_bpm",
+    "median_vo2_ml_kg_min"
+  ],
+  "models": {
+    "ridge": {
+      "alpha": 1.0
+    }
+  },
+  "scaling": true,
+  "feature_selection": null,
+  "tuning": {
+    "method": "random",
+    "n_iter": 10,
+    "inner_folds": 4,
+    "param_spaces": {
+      "ridge": {
+        "alpha": [
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0,
+          10000.0,
+          100000.0
+        ]
+      }
+    }
+  },
+  "pca": null
+}

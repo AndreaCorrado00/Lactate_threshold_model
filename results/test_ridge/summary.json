@@ -1,0 +1,54 @@
+{
+  "n_test": 57,
+  "metrics": {
+    "mae_W": 12.693796293663292,
+    "rmse_W": 16.573530169160392,
+    "r2": 0.8674394302612976
+  },
+  "bootstrap_95_percent": {
+    "mae_W": [
+      10.059202030177365,
+      15.631981280009011
+    ],
+    "rmse_W": [
+      12.625308321248232,
+      20.765395288655608
+    ],
+    "r2": [
+      0.7505446948555474,
+      0.9284939068784314
+    ]
+  },
+  "bootstrap_repeats": 2000,
+  "seed": 42,
+  "train_sha256": "17f6ae9922bcd520008043aac2c6f862e51f0bece1b15e0a8332bb15a1f756d8",
+  "test_sha256": "0875a52b0f96f2f8bcecb7ea5ca3e858904f509a286204eb4620ec06729988f6",
+  "model_sha256": "614cff63c4185d5155a56aa16eb5da87cf940fd1a8aaa00de09e0ea310a63616",
+  "run": "results\\runs\\ridge_final",
+  "features": [
+    "gender",
+    "height_m",
+    "mass_kg",
+    "bmi_kg_m2",
+    "skinfolds_mm",
+    "fat_pct",
+    "lbm_kg",
+    "hb",
+    "hct",
+    "rbc",
+    "wbc",
+    "vo2max_ml_kg_min",
+    "vo2max_l_min",
+    "ve_max_l_min",
+    "hr_max_bpm",
+    "vo2_160bpm_ml_kg_min",
+    "power_160bpm_W",
+    "age_years",
+    "median_hr_bpm",
+    "median_vo2_ml_kg_min"
+  ],
+  "test_accessed": true,
+  "evaluation_only": true,
+  "bias_predicted_minus_observed_W": -3.8061666941867034,
+  "bootstrap_limitation": "Per test, modello fisso; non include incertezza del training o dipendenza tra test dello stesso atleta"
+}

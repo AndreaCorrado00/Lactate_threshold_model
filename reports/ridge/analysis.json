@@ -1,0 +1,212 @@
+{
+  "model": "ridge",
+  "alpha": 0.1,
+  "intercept_standardized_W": 272.63963963963965,
+  "intercept_original_units_W": -433.1293535369741,
+  "scaling": true,
+  "pca": false,
+  "feature_selection": false,
+  "features": [
+    "gender",
+    "height_m",
+    "mass_kg",
+    "bmi_kg_m2",
+    "skinfolds_mm",
+    "fat_pct",
+    "lbm_kg",
+    "hb",
+    "hct",
+    "rbc",
+    "wbc",
+    "vo2max_ml_kg_min",
+    "vo2max_l_min",
+    "ve_max_l_min",
+    "hr_max_bpm",
+    "vo2_160bpm_ml_kg_min",
+    "power_160bpm_W",
+    "age_years",
+    "median_hr_bpm",
+    "median_vo2_ml_kg_min"
+  ],
+  "statistics": {
+    "train_oof": {
+      "mae_W": 15.93100210261947,
+      "rmse_W": 19.887837346630125,
+      "r2": 0.8103079212372669,
+      "n": 222,
+      "bias_W": 0.34720164709666174,
+      "error_sd_W": 19.929743867278155,
+      "median_absolute_error_W": 13.875783698243652,
+      "p90_absolute_error_W": 30.002693299142226,
+      "max_absolute_error_W": 54.12539591769291,
+      "n_over": 105,
+      "n_under": 117,
+      "within_10W": 80,
+      "within_20W": 147,
+      "within_30W": 199,
+      "ratio_observed_mean": 0.7988630653790306,
+      "ratio_predicted_mean": 0.8014550807238258,
+      "ratio_observed_sd": 0.041716669408367886,
+      "ratio_predicted_sd": 0.04516127479382764,
+      "ratio_correlation": -0.0034686087842475816,
+      "ratio_mae": 0.048190050783178624,
+      "predicted_max_correlation": 0.9434466414196463,
+      "observed_max_correlation": 0.9503247510126216,
+      "observed_ratio_above_one": 0,
+      "predicted_ratio_above_one": 0,
+      "n_negative_predictions": 0,
+      "missing_features": {
+        "gender": 0,
+        "height_m": 0,
+        "mass_kg": 0,
+        "bmi_kg_m2": 0,
+        "skinfolds_mm": 0,
+        "fat_pct": 0,
+        "lbm_kg": 0,
+        "hb": 0,
+        "hct": 1,
+        "rbc": 2,
+        "wbc": 4,
+        "vo2max_ml_kg_min": 2,
+        "vo2max_l_min": 1,
+        "ve_max_l_min": 6,
+        "hr_max_bpm": 0,
+        "vo2_160bpm_ml_kg_min": 5,
+        "power_160bpm_W": 4,
+        "age_years": 3,
+        "median_hr_bpm": 0,
+        "median_vo2_ml_kg_min": 1
+      },
+      "top_errors": [
+        {
+          "test_id": "A242",
+          "observed_W": 280.0,
+          "predicted_W": 334.1253959176929,
+          "error_W": 54.12539591769291
+        },
+        {
+          "test_id": "A562",
+          "observed_W": 324.0,
+          "predicted_W": 377.98788597277587,
+          "error_W": 53.98788597277587
+        },
+        {
+          "test_id": "A3041",
+          "observed_W": 338.0,
+          "predicted_W": 285.28663564213304,
+          "error_W": -52.713364357866965
+        },
+        {
+          "test_id": "A600",
+          "observed_W": 244.0,
+          "predicted_W": 295.0735111733253,
+          "error_W": 51.0735111733253
+        },
+        {
+          "test_id": "A233",
+          "observed_W": 190.0,
+          "predicted_W": 239.2158035455335,
+          "error_W": 49.215803545533504
+        }
+      ]
+    },
+    "test": {
+      "mae_W": 12.693796293663294,
+      "rmse_W": 16.573530169160392,
+      "r2": 0.8674394302612976,
+      "n": 57,
+      "bias_W": -3.8061666941867034,
+      "error_sd_W": 16.27394655892598,
+      "median_absolute_error_W": 11.178494104834044,
+      "p90_absolute_error_W": 25.34080047086961,
+      "max_absolute_error_W": 60.15804497181739,
+      "n_over": 19,
+      "n_under": 38,
+      "within_10W": 27,
+      "within_20W": 47,
+      "within_30W": 54,
+      "ratio_observed_mean": 0.8036283604048218,
+      "ratio_predicted_mean": 0.792735682136168,
+      "ratio_observed_sd": 0.03961129283793125,
+      "ratio_predicted_sd": 0.028028087238322275,
+      "ratio_correlation": 0.10905207004561888,
+      "ratio_mae": 0.03690972401666361,
+      "predicted_max_correlation": 0.9748166561538435,
+      "observed_max_correlation": 0.9574207779448373,
+      "observed_ratio_above_one": 0,
+      "predicted_ratio_above_one": 0,
+      "n_negative_predictions": 0,
+      "missing_features": {
+        "gender": 0,
+        "height_m": 0,
+        "mass_kg": 0,
+        "bmi_kg_m2": 0,
+        "skinfolds_mm": 0,
+        "fat_pct": 0,
+        "lbm_kg": 0,
+        "hb": 0,
+        "hct": 1,
+        "rbc": 1,
+        "wbc": 1,
+        "vo2max_ml_kg_min": 0,
+        "vo2max_l_min": 0,
+        "ve_max_l_min": 1,
+        "hr_max_bpm": 0,
+        "vo2_160bpm_ml_kg_min": 0,
+        "power_160bpm_W": 0,
+        "age_years": 1,
+        "median_hr_bpm": 0,
+        "median_vo2_ml_kg_min": 2
+      },
+      "top_errors": [
+        {
+          "test_id": "A3063",
+          "observed_W": 288.0,
+          "predicted_W": 348.1580449718174,
+          "error_W": 60.15804497181739
+        },
+        {
+          "test_id": "A587",
+          "observed_W": 216.0,
+          "predicted_W": 253.98163812165654,
+          "error_W": 37.981638121656545
+        },
+        {
+          "test_id": "A210",
+          "observed_W": 368.0,
+          "predicted_W": 333.5916032640322,
+          "error_W": -34.40839673596781
+        },
+        {
+          "test_id": "A266",
+          "observed_W": 340.0,
+          "predicted_W": 311.04879381834235,
+          "error_W": -28.951206181657653
+        },
+        {
+          "test_id": "A3037",
+          "observed_W": 324.0,
+          "predicted_W": 296.4558245779148,
+          "error_W": -27.544175422085175
+        }
+      ]
+    }
+  },
+  "test_bootstrap_95_percent": {
+    "mae_W": [
+      10.059202030177365,
+      15.631981280009011
+    ],
+    "rmse_W": [
+      12.625308321248232,
+      20.765395288655608
+    ],
+    "r2": [
+      0.7505446948555474,
+      0.9284939068784314
+    ]
+  },
+  "model_sha256": "614cff63c4185d5155a56aa16eb5da87cf940fd1a8aaa00de09e0ea310a63616",
+  "train_sha256": "17f6ae9922bcd520008043aac2c6f862e51f0bece1b15e0a8332bb15a1f756d8",
+  "test_sha256": "0875a52b0f96f2f8bcecb7ea5ca3e858904f509a286204eb4620ec06729988f6"
+}

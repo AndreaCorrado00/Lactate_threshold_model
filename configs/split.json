@@ -1,0 +1,7 @@
+{
+  "source": "data/processed/features_unimputed.csv",
+  "output": "data/splits/v1",
+  "test_fraction": 0.2,
+  "seed": 42,
+  "cv_folds": 5
+}
