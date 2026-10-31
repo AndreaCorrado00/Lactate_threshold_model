@@ -1,0 +1,120 @@
+{
+  "split_dir": "data/splits/v2_train_qc",
+  "seed": 42,
+  "importance_repeats": 10,
+  "features": [
+    "gender",
+    "height_m",
+    "mass_kg",
+    "bmi_kg_m2",
+    "skinfolds_mm",
+    "fat_pct",
+    "lbm_kg",
+    "hb",
+    "hct",
+    "rbc",
+    "wbc",
+    "vo2max_ml_kg_min",
+    "vo2max_l_min",
+    "ve_max_l_min",
+    "hr_max_bpm",
+    "vo2_160bpm_ml_kg_min",
+    "power_160bpm_W",
+    "age_years",
+    "median_hr_bpm",
+    "median_vo2_ml_kg_min"
+  ],
+  "models": {
+    "ridge": {
+      "alpha": 1.0
+    },
+    "random_forest": {
+      "n_estimators": 300,
+      "max_depth": 5,
+      "min_samples_leaf": 5,
+      "max_features": 1.0
+    },
+    "xgboost": {
+      "n_estimators": 300,
+      "max_depth": 2,
+      "learning_rate": 0.03,
+      "reg_lambda": 5.0
+    },
+    "bagging": {
+      "n_estimators": 300,
+      "estimator__max_depth": 5,
+      "estimator__min_samples_leaf": 5
+    }
+  },
+  "tuning": {
+    "method": "random",
+    "n_iter": 10,
+    "inner_folds": 4,
+    "param_spaces": {
+      "ridge": {
+        "alpha": [
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0,
+          1000.0,
+          10000.0,
+          100000.0
+        ]
+      },
+      "random_forest": {
+        "max_depth": [
+          3,
+          5,
+          8
+        ],
+        "min_samples_leaf": [
+          5,
+          10,
+          15
+        ],
+        "max_features": [
+          0.75,
+          1.0
+        ]
+      },
+      "xgboost": {
+        "max_depth": [
+          2,
+          3
+        ],
+        "min_child_weight": [
+          5,
+          10
+        ],
+        "reg_lambda": [
+          5.0,
+          10.0,
+          20.0
+        ]
+      },
+      "bagging": {
+        "estimator__max_depth": [
+          3,
+          5,
+          8
+        ],
+        "estimator__min_samples_leaf": [
+          5,
+          10
+        ],
+        "max_samples": [
+          0.7,
+          1.0
+        ]
+      }
+    }
+  },
+  "target_mode": "residual",
+  "proportional": {
+    "mode": "fit"
+  }
+}

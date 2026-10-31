@@ -1,0 +1,71 @@
+{
+  "model": "ridge",
+  "target_mode": "residual",
+  "proportional": {
+    "mode": "fit"
+  },
+  "features": [
+    "gender",
+    "height_m",
+    "mass_kg",
+    "bmi_kg_m2",
+    "skinfolds_mm",
+    "fat_pct",
+    "lbm_kg",
+    "hb",
+    "hct",
+    "rbc",
+    "wbc",
+    "vo2max_ml_kg_min",
+    "vo2max_l_min",
+    "ve_max_l_min",
+    "hr_max_bpm",
+    "vo2_160bpm_ml_kg_min",
+    "power_160bpm_W",
+    "age_years",
+    "median_hr_bpm",
+    "median_vo2_ml_kg_min"
+  ],
+  "n_oof": 222,
+  "folds": 5,
+  "refit": false,
+  "scaling": true,
+  "test_accessed": false,
+  "oof": {
+    "proportional": {
+      "mae_W": 10.832635634514354,
+      "rmse_W": 14.265018163589696,
+      "r2": 0.9024069850419125
+    },
+    "corrected": {
+      "mae_W": 10.823571670636396,
+      "rmse_W": 14.21519993777863,
+      "r2": 0.9030874498110093
+    },
+    "delta_zero": {
+      "mae_W": 10.832635634514354,
+      "rmse_W": 14.265018163589696,
+      "r2": -8.122322398884663e-06
+    },
+    "delta_model": {
+      "mae_W": 10.823571670636396,
+      "rmse_W": 14.21519993777863,
+      "r2": 0.0069644084098807735
+    },
+    "q_delta": 0.006972474099597115,
+    "delta_correlation": 0.08381213565755444,
+    "mae_gain_W": 0.009063963877958159,
+    "rmse_gain_W": 0.049818225811065986,
+    "bias_W": -0.007563863189118093,
+    "observed_delta_sd_W": 14.2971974707806,
+    "predicted_delta_sd_W": 1.0877320811438231
+  },
+  "train_sha256": "17f6ae9922bcd520008043aac2c6f862e51f0bece1b15e0a8332bb15a1f756d8",
+  "folds_sha256": "a29547c60f4f717aa1f68d10757e756f43d26f89d998f96fba0119bd76b482e4",
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0"
+  }
+}

@@ -15,7 +15,7 @@ Train corrente: 222 record dopo le esclusioni richieste:
 
 Esclusioni successive all'esplorazione, non tutte errori accertati. Nessuna esclusione nel test. Fold esterni originali conservati per i record mantenuti: 45, 45, 43, 44, 45 test. Manifest e motivi in `data/splits/v2_train_qc/`; test originale in `data/splits/v1/`.
 
-Target non imputato. Covariate conservate con mancanti; imputazione per sesso e scaling soltanto nei fit. Ridge usa sesso, antropometria, ematologia, misure cardiorespiratorie, età e potenza a 160 bpm. Non usa massima potenza, step, cadenza o variabili derivate dal lattato. La potenza massima serve solo per i rapporti diagnostici.
+Target non imputato. Covariate conservate con mancanti; imputazione per sesso e scaling soltanto nei fit. Ridge usa sesso, antropometria, ematologia, misure cardiorespiratorie, età e potenza a 160 bpm. Non usa massima potenza, step, cadenza o variabili derivate dal lattato. Nella prima fase la potenza massima serve solo per i rapporti diagnostici; nella fase scostamenti è invece un input necessario della baseline proporzionale, escluso dalle covariate della correzione.
 
 Nel test sette celle mancanti fra gli input: Hct, RBC, WBC, ventilazione massima ed età una ciascuna, mediana VO₂ due. Imputate con mediane del train. Disponibilità dettagliate in `ridge/analysis.json`.
 

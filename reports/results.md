@@ -1,6 +1,6 @@
 # Ridge: risultati e interpretazione
 
-30 ottobre 2026. Unica run attiva: `results/runs/ridge_final`; unica valutazione attiva: `results/test_ridge`. Prove precedenti e PCA archiviate fuori Git. Nessuna modellizzazione degli scostamenti individuali avviata.
+30 ottobre 2026. Run della prima fase: `results/runs/ridge_final`; unica valutazione attiva: `results/test_ridge`. Prove precedenti e PCA archiviate fuori Git. La successiva analisi degli scostamenti è completata in sola validation: [risultati](residuals/results.md).
 
 ## Procedura
 
